@@ -1,0 +1,359 @@
+2021-01-19 17:16:06,225 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 17:16:06,391 166    [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 17:16:06,582 357    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 17:16:06 CST 2021]; root of context hierarchy
+2021-01-19 17:16:06,659 434    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 17:16:07,009 784    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 17:16:07,117 892    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 17:16:09,059 2834   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'contentCateGoryServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.shengde.e3mall.dao.TbContentCategoryDao com.shengde.content.service.impl.ContentCateGoryServiceImpl.tbContentCategoryDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.shengde.e3mall.dao.TbContentCategoryDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-01-19 17:16:09,064 2839   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'contentCateGoryServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.shengde.e3mall.dao.TbContentCategoryDao com.shengde.content.service.impl.ContentCateGoryServiceImpl.tbContentCategoryDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.shengde.e3mall.dao.TbContentCategoryDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'contentCateGoryServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.shengde.e3mall.dao.TbContentCategoryDao com.shengde.content.service.impl.ContentCateGoryServiceImpl.tbContentCategoryDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.shengde.e3mall.dao.TbContentCategoryDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.shengde.e3mall.dao.TbContentCategoryDao com.shengde.content.service.impl.ContentCateGoryServiceImpl.tbContentCategoryDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.shengde.e3mall.dao.TbContentCategoryDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 14 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.shengde.e3mall.dao.TbContentCategoryDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 16 more
+2021-01-19 17:40:48,650 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 17:40:48,746 96     [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 17:40:48,864 214    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 17:40:48 CST 2021]; root of context hierarchy
+2021-01-19 17:40:48,930 280    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-19 17:40:49,142 492    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 17:40:49,302 652    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 17:40:49,365 715    [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-19 17:40:49,366 716    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 17:40:55,143 6493   [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-19 17:40:55,193 6543   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-19 17:40:55,196 6546   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
+2021-01-19 17:42:59,088 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 17:42:59,329 241    [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 17:42:59,501 413    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 17:42:59 CST 2021]; root of context hierarchy
+2021-01-19 17:42:59,586 498    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-19 17:42:59,837 749    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 17:43:00,076 988    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 17:43:00,150 1062   [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-19 17:43:00,151 1063   [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 17:43:02,891 3803   [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-19 17:43:02,944 3856   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-19 17:43:02,946 3858   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
+2021-01-19 18:07:37,926 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 18:07:38,053 127    [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 18:07:38,160 234    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 18:07:38 CST 2021]; root of context hierarchy
+2021-01-19 18:07:38,245 319    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-19 18:07:38,466 540    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 18:07:38,626 700    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 18:07:38,681 755    [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-19 18:07:38,682 756    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 18:07:44,369 6443   [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-19 18:07:44,420 6494   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-19 18:07:44,423 6497   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
+2021-01-19 18:08:31,097 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 18:08:31,285 188    [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 18:08:31,459 362    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 18:08:31 CST 2021]; root of context hierarchy
+2021-01-19 18:08:31,531 434    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-19 18:08:31,689 592    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 18:08:31,822 725    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 18:08:31,878 781    [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-19 18:08:31,878 781    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 18:08:33,365 2268   [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-19 18:08:33,417 2320   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-19 18:08:33,418 2321   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
+2021-01-19 18:29:07,941 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 18:29:08,006 65     [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 18:29:08,122 181    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 18:29:08 CST 2021]; root of context hierarchy
+2021-01-19 18:29:08,174 233    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-19 18:29:08,324 383    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 18:29:08,449 508    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 18:29:08,505 564    [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-19 18:29:08,505 564    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 18:29:08,896 955    [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-19 18:29:08,971 1030   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-19 18:29:08,976 1035   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
+2021-01-19 18:30:42,682 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 18:30:42,762 80     [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 18:30:42,884 202    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 18:30:42 CST 2021]; root of context hierarchy
+2021-01-19 18:30:42,944 262    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-19 18:30:43,097 415    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 18:30:43,232 550    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 18:30:43,282 600    [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-19 18:30:43,282 600    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 18:30:43,663 981    [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-19 18:30:43,736 1054   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-19 18:30:43,740 1058   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
+2021-01-19 18:38:59,857 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 18:38:59,977 120    [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 18:39:00,175 318    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 18:39:00 CST 2021]; root of context hierarchy
+2021-01-19 18:39:00,248 391    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-19 18:39:00,405 548    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 18:39:00,535 678    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 18:39:00,604 747    [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-19 18:39:00,605 748    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 18:39:01,065 1208   [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-19 18:39:01,134 1277   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-19 18:39:01,139 1282   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
+2021-01-19 22:30:29,582 0      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-19 22:30:29,680 98     [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-19 22:30:29,814 232    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@467aecef: startup date [Tue Jan 19 22:30:29 CST 2021]; root of context hierarchy
+2021-01-19 22:30:29,878 296    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-19 22:30:30,090 508    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-19 22:30:30,258 676    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-19 22:30:30,319 737    [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-19 22:30:30,319 737    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-19 22:30:35,996 6414   [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-19 22:30:36,063 6481   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-19 22:30:36,066 6484   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
+2021-01-20 12:19:56,552 1      [           main] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2021-01-20 12:19:56,640 89     [           main] INFO  m.alibaba.dubbo.container.Main  -  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: 2.5.3, current host: 127.0.0.1
+2021-01-20 12:19:56,792 241    [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f195bc3: startup date [Wed Jan 20 12:19:56 CST 2021]; root of context hierarchy
+2021-01-20 12:19:56,856 305    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]
+2021-01-20 12:19:57,040 489    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-service.xml]
+2021-01-20 12:19:57,222 671    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-trans.xml]
+2021-01-20 12:19:57,342 791    [           main] INFO  ort.DefaultListableBeanFactory  - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Generic bean: class [com.alibaba.druid.pool.DruidDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=close; defined in file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\applicationContext-dao.xml]] with [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null]
+2021-01-20 12:19:57,342 791    [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [F:\IdeaProjects\content\content-service\target\classes\META-INF\spring\SqlMapConfig.xml]
+2021-01-20 12:19:57,773 1222   [           main] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [db.properties]
+2021-01-20 12:19:57,881 1330   [           main] WARN  ClassPathXmlApplicationContext  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+2021-01-20 12:19:57,886 1335   [           main] ERROR m.alibaba.dubbo.container.Main  -  [DUBBO] Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath, dubbo version: 2.5.3, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'databaseType' threw exception; nested exception is java.lang.IllegalStateException: Driver for test database type [HSQL] is not available in the classpath
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 14 more
