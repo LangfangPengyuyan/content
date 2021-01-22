@@ -36,7 +36,7 @@ public class ContentCateGoryServiceImpl implements ContentCateGoryService {
 
             node.setId(ContentCategory.getId());
             node.setText(ContentCategory.getName());
-            node.setState(Boolean.parseBoolean(ContentCategory.getIsParent()?"closed":"open"));
+            node.setState((ContentCategory.getIsParent()?"closed":"open"));
             //添加到列表
             nodeList.add(node);
         }
