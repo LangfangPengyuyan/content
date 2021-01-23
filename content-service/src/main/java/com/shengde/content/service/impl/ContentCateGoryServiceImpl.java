@@ -26,7 +26,7 @@ public class ContentCateGoryServiceImpl implements ContentCateGoryService {
         TbContentCategory tbContentCategory = new TbContentCategory();
         tbContentCategory.setParentId(parentId);
         //执行查询
-        List<TbContentCategory> list =tbContentCategoryDao.queryAll(parentId);
+        List<TbContentCategory> list =tbContentCategoryDao.queryAll(tbContentCategory);
         //转换成EasyUITreeNode的列表
         List<EasyUITreeNode> nodeList = new ArrayList<>();
 
