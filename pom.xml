@@ -12,6 +12,7 @@
     <modules>
         <module>content-interface</module>
         <module>content-service</module>
+        <module>content-dao</module>
     </modules>
 
     <properties>
